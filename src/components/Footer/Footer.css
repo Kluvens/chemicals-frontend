@@ -1,0 +1,7 @@
+.footer{ background: #eee; padding: 10px 0;}
+.footer p{ line-height: 20px; font-size: 13px; color: #666;}
+
+.navbox{ width: 100%; text-align: center;}
+.navbox a{ display: inline-block; height: 46px; line-height: 46px; padding: 0 26px; color: #fff; font-size:14px;}
+.navbox a:hover{ background: #ff8a00; }
+.navbox a.on{background: #ff8a00}

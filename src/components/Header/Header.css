@@ -1,0 +1,10 @@
+.header{ height: 80px; width: 1090px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .com-name{ font-size: 20px; color: #444; width: 400px; line-height: 30px; margin:12px 0 0 10px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

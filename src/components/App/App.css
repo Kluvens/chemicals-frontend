@@ -1,0 +1,117 @@
+@charset "UTF-8";body,button,dd,dl,dt,h1,h2,h3,h4,h5,h6,input,li,ol,p,td,textarea,th,ul{margin:0;padding:0}
+* {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+body{font-size:12px;    font-family: "PingFangSC", "helvetica neue", "hiragino sans gb", "arial", "microsoft yahei ui", "microsoft yahei", "simsun", "sans-serif" !important;}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,em,img,small,strong,b,u,i,ul,li,ol,dl,dt,dd,form,select,label,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;}
+address,cite,dfn,em,var,i{font-style:normal; }
+small{font-size:12px;}
+ul,ol,li{list-style:none;}
+a{text-decoration:none;color: #666;}
+a:hover{text-decoration:none; color:#ff8a00;}
+img{border:0;vertical-align:middle;max-width: 100%;max-height: 100%; }
+table{border-collapse:collapse;border-spacing:0}
+div{ margin: 0 auto; }
+button{padding:0;outline:0;border:none; cursor: pointer;}
+input{outline:0;vertical-align:middle; border: none;    font-family: "PingFangSC", "helvetica neue", "hiragino sans gb", "arial", "microsoft yahei ui", "microsoft yahei", "simsun", "sans-serif" !important;}
+input[type=text]{outline:0}
+input[value]{color: #333;}
+.placeholder,textarea[placeholder]{color: #999; font-size: 13px;}
+.undis{display:none;}
+.dis{display:block;}
+textarea{resize:none;outline:0}
+.clearfix:before,.clearfix:after{content: ''; display: table;}
+.clearfix:after{clear:both;}
+.noborder{border:0;}
+.undis{display:none;}
+
+.all {
+  width: 100%;
+  height: 100%;
+}
+
+.shopwrap{ width: 1090px; }
+.shopwrap:after{ content: ""; clear: both; display: block; }
+.shopnavbg1{ width: 100%; height: 46px; background: #00adb1; }
+.navbox{ width: 100%; text-align: center;}
+.navbox a{ display: inline-block; height: 46px; line-height: 46px; padding: 0 26px; color: #fff; font-size:14px;}
+.navbox a.on{background: #ff8a00}
+.textalign{ text-align: right; }
+.shop-w{ width: 220px; overflow: hidden; }
+.shopbanner{height: 400px; width: 100%; background: #e3eaf0; overflow: hidden; text-align: center;}/* height: 340px;*/
+.shopbanner img{ height: 400px; vertical-align: top;}/* max-width: 1920px; max-height: 340px;width: 1920px; height: 340px; */
+.shopwrap .shopleft{ float: left;width: 220px; margin-top: 20px;}
+.shopwrap .shopleft .shopbg h2{background: #00adb1; color: #fff; display: block; font:700 13px/30px "YaHei"; padding-left: 15px;}
+.shopwrap .shopleft .shopbg{ background: #f5f5f5; margin-bottom:20px; }
+.shop-w{ width: 220px; overflow: hidden; padding: 15px;}
+.shop-w .sch{height: 26px;width: 159px;border: 1px solid #e4e4e4;padding-left: 4px;line-height: 26px;border-right: none;}
+.shop-w .schgo{background: #fb8200;color: #fff;text-align: center;display: inline-block;height: 26px; line-height: 26px; padding: 0 5px;border: none; float: right;}
+.shop-w .schgo:hover{ transition: 0.3s; background-color:#EB650C;-webkit-animation-duration:.3s;animation-duration:.3s;}
+.shop-w .catelist{ overflow: hidden;}
+.shop-w .catelist li{ display: block; line-height: 28px; font-size: 12px;}
+.shop-w .catelist li a{ color: #666; }
+.shop-w .catelist li a:hover{ color: #ff8a00; cursor: pointer;}
+.shop-w .shop-contact{ overflow: hidden;}
+.shop-w .shop-contact li{ color: #999;  line-height: 16px;font-size: 12px;overflow: hidden;margin-bottom: 10px;}
+.shop-w .shop-contact li label{ color: #666; }
+.shop-w .shop-contact .shop-f{ font-weight: 700;color: #ff8a00;line-height: 16px;float: right;text-align: left;width: 145px; }
+.shop-w .shop-contact .shop-g{ font-weight: 400;color: #666;line-height: 16px;float: right;text-align: left;width: 145px; }
+/*right*/
+.shopright{ float: right; width: 850px; }
+
+.product-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/*主打产品*/
+.mainwrap{ overflow: hidden;  width: 850px;}/* margin-top: 20px;*/
+.mainwrap h2{background: #00adb1;color: #fff;display: block;font: 700 13px/30px "YaHei";padding-left: 15px; margin-top: 20px;}
+.mainwrap h2 span{float: right;padding-right: 10px;font-size: 12px;color: #FFF;}
+.mainwrap h2 span a{color: #FFF; font-weight:normal;}
+.mainwrap ul{ overflow: hidden; font-size: 12px;}
+.mainwrap li .mainimg:hover{ box-shadow: 1px 2px 6px #ddd; }
+.mainwrap li{ float: left; width: 197px; height: auto;  margin:20px 20px 0 0; }/*overflow: hidden;*/
+.mainwrap li:after{ content: ""; display: block; clear: both; }
+.mainwrap li .mainimg{ width: 197px;height:180px; text-align: center; vertical-align: middle; padding: 10px; border: 1px solid #ddd; margin-bottom: 10px;line-height: 160px;}
+.mainwrap li .mainimg a{ width:180px; height: 165px; display:block;}
+.mainwrap li .mainimg img{vertical-align: middle; display: inline-block;}
+.mainwrap li span{ display: block;line-height: 20px; color: #666;height: 20px;overflow: hidden; }
+.mainwrap li span label{ color: #999; }
+.mainwrap li.margin0{ margin-right:0; }
+/*留言到供应商*/
+.shoptext{ width: 284px; height: 36px; border: 1px solid #ddd; line-height: 36px; padding-left: 2px;}
+.shopbot{ background: #eee; margin-top: 20px; padding: 10px 0;}
+.shopbot p{ line-height: 20px; font-size: 13px; color: #666;}
+.shopright .companyjs{ width: 850px; overflow: hidden; }
+.shopright .companyjs h3{display: block; font:400 22px/22px "YaHei"; margin: 20px 0;}
+.shopright .companyjs dl{ overflow: hidden; height: 36px; line-height: 36px; }
+.shopright .companyjs dl dt{ float: left; text-align: right; color: #999; width: 140px; line-height: 30px;}
+.shopright .companyjs dl dd{ float: left; color: #666; line-height: 30px; padding-left:10px;}
+.location{ width: 850px; overflow: hidden; color: #999; height: 30px; border-bottom: 1px solid #eee; }
+.shopwrap .authen.nei{background: #f5f5f5; border: none;}
+.shopwrap .authen span.neibg{ display: block; background: #00adb1;color: #fff;display: block;font: 700 13px/30px "YaHei"; margin-bottom: 5px;}
+.shopright .company.margin0{ margin-top:0;}
+.shopwrap .authen span.top15{ margin-top: 15px; }
+.mainwrap ul.casewrap{ width: 100%; overflow: hidden; }
+.mainwrap ul.casewrap li{width: 800px;font-size: 14px; overflow: hidden;}
+.mainwrap ul.casewrap li em{ display: inline-block; width:6px; height: 6px; background: #999; margin:0 10px 2px 0; border-radius:50px; }
+.mainwrap ul.casewrap li a{ display: inline-block; width: 660px; height: 18px; line-height:24px; overflow: hidden;text-overflow: ellipsis; white-space: nowrap; margin-right: 20px;}
+.mainwrap ul.casewrap li span{ display: inline-block; color: #999;  }
+.mainwrap .case{ width: 100%; overflow: hidden; margin-top: 20px;}
+.mainwrap .case p{display:block;line-height: 26px;overflow: hidden;/* text-indent: 3em; *//* margin-bottom: 30px; */color: #666;}
+.mainwrap .case span img{ width: 620px; height: 420px; max-width: 100%; max-height: 100%; vertical-align: middle; text-align: center; }
+.mainwrap .case span{/* display: block; *//* text-align: center; */margin: 10px 0;}
+
+.navbutton {
+  background-color: #00adb1;
+}
+.navbutton:hover {
+  height: 100%;
+  background-color: #ff8a00; 
+  cursor: pointer;
+}
+.FaShoppingCart {
+  color: white;
+}
+.navbox a {
+  width: 150px;
+}
