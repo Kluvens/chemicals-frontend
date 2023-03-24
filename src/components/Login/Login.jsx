@@ -50,7 +50,6 @@ const Login = () => {
     <div className='main'>
       <div className='login-session'>
         <div className='login-left'>
-
         </div>
         <form onSubmit={handleSubmit} className='form'>
         <h2>We are here for you</h2>

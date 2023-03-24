@@ -109,9 +109,10 @@ textarea{resize:none;outline:0}
   background-color: #ff8a00; 
   cursor: pointer;
 }
-.FaShoppingCart {
-  color: white;
-}
 .navbox a {
   width: 150px;
+}
+.navbutton svg {
+  color: white;
+  font-size: 15px;
 }

@@ -5,7 +5,8 @@ import Product from '../Products/Product/Product';
 import Items from '../Products/Products';
 import { useNavigate, Link, useNavigation } from "react-router-dom";
 import Footer from '../Footer/Footer';
-import {FaSignInAlt, FaSignOutAlt, FaUser, FaShoppingCart} from 'react-icons/fa';
+import {FaHome, FaProductHunt, FaInfoCircle, FaUser, FaShoppingCart} from 'react-icons/fa';
+import {AiFillHome} from 'react-icons/ai'
 
 function App() {
   const items = Items;
@@ -102,19 +103,19 @@ function App() {
       <div className='shopnavbg1'>
         <div className='navbox'>
           <button onClick={handleHomeClick} className='navbutton'>
-              <a>Home</a>
+              <a><FaHome /> Home</a>
           </button>
           <button onClick={handleHomeClick} className='navbutton'>
-              <a>Products</a>
+              <a><FaProductHunt /> Products</a>
           </button>
           <button onClick={handleAboutClick} className='navbutton'>
-              <a>About Us</a>
+              <a><FaInfoCircle /> About Us</a>
           </button>
           <button onClick={handleProfileClick} className='navbutton'>
-              <a>Profile</a>
+              <a><FaUser /> Profile</a>
           </button>
           <button onClick={handleCartOnclick} className='navbutton'>
-              <a>Cart</a>
+              <a><FaShoppingCart /> Cart</a>
           </button>
           
         </div>

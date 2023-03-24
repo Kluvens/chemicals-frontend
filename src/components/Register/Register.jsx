@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Register.css'
 
 const Register = () => {
     const [name, setName] = useState('');
@@ -58,26 +59,34 @@ const Register = () => {
     }
 
     return (
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Name:</label>
-          <input type="text" value={name} onChange={handleNameChange} />
+      <div className='main'>
+        <div className='register-session'>
+          <div className='register-left'>
+          </div>
+          <form className='form' onSubmit={handleSubmit}>
+            <h2>Register</h2>
+            <div>
+              <label>Name:</label>
+              <input className='register-input' type="text" value={name} onChange={handleNameChange} />
+            </div>
+            <div>
+              <label>Email:</label>
+              <input className='register-input' type="email" value={email} onChange={handleEmailChange} />
+            </div>
+            <div>
+              <label>Password:</label>
+              <input className='register-input' type="password" value={password} onChange={handlePasswordChange} />
+            </div>
+            <div>
+              <label>Confirm Password:</label>
+              <input className='register-input' type="password" value={confirmPassword} onChange={handleConfirmPasswordChange} style={{ borderColor: showRed ? 'red' : 'initial' }} />
+              {showRed ? <p style={{ color: 'red' }}>Passwords do not match</p> : null}
+            </div>
+            <button className='register-button' type="submit">Register</button>
+          </form>
         </div>
-        <div>
-          <label>Email:</label>
-          <input type="email" value={email} onChange={handleEmailChange} />
-        </div>
-        <div>
-          <label>Password:</label>
-          <input type="password" value={password} onChange={handlePasswordChange} />
-        </div>
-        <div>
-          <label>Confirm Password:</label>
-          <input type="password" value={confirmPassword} onChange={handleConfirmPasswordChange} style={{ borderColor: showRed ? 'red' : 'initial' }} />
-          {showRed ? <p style={{ color: 'red' }}>Passwords do not match</p> : null}
-        </div>
-        <button type="submit">Register</button>
-      </form>
+      </div>
+      
     );
     
 }
