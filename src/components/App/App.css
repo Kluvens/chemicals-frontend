@@ -60,6 +60,7 @@ textarea{resize:none;outline:0}
 .product-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 30px;
 }
 
 /*主打产品*/

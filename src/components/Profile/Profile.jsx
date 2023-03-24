@@ -31,14 +31,24 @@ const Profile = () => {
   }
 
   return (
-    <div>
-      <Link to='/'>
-        <button>Home</button>
-      </Link>
+    // <div className="user-profile">
+    //   <Link to='/'>
+    //     <button>Home</button>
+    //   </Link>
+    //   <h1>{userData.name}</h1>
+    //   <p>{userData.email}</p>
+    //   <button onClick={handleLogOut}>Logout</button>
+    // </div>
+    <div class="user-profile">
       <h1>{userData.name}</h1>
+      <p class="title">CEO & Founder, Example</p>
       <p>{userData.email}</p>
-      <button onClick={handleLogOut}>Logout</button>
-    </div>
+      <a href="#"><i class="fa fa-dribbble"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <p><button onClick={handleLogOut}>Logout</button></p>
+  </div>
   );
 };
 
