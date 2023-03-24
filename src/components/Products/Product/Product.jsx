@@ -1,9 +1,46 @@
 import { Link } from "react-router-dom";
 import './Product.css'
+import { useState } from "react";
+import {FaCartPlus} from 'react-icons/fa';
 
 function Product(props) {
     const { id, name, category, price, description } = props.product;
   
+    const [error, setError] = useState('');
+    
+    const addToCart = async () => {
+      const token = localStorage.getItem('token');
+      const userId = localStorage.getItem('userId');
+      const { id, name, category, price, description } = props.product;
+
+      try {
+        const response = await fetch("http://localhost:8082/api/users/addToCart", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({ 
+            userId: userId,
+            itemName: name,
+            itemDescription: description,
+            itemPrice: price
+          }),
+        });
+  
+        if (response.status === 200) {
+          const data = await response.json();
+          console.log(data);
+        } else {
+          console.log(userId);
+          const { message } = await response.json();
+          setError(message);
+        }
+      } catch (error) {
+        setError('An error occurred while processing your request. Please try again later.');
+      }
+    }
+
     return (
       <div className='product'>
         
@@ -15,9 +52,11 @@ function Product(props) {
 
         <h3 className="label">{name}</h3>
         <p className="label">Category: {category}</p>
-        <Link to="/message" state={{ id: id, name: name}}>
-          <button className="inquriy">Add to cart</button>
-        </Link>
+        <button className="inquriy" onClick={addToCart}>
+          <Link>
+            <FaCartPlus/> <span>Add to Cart</span> 
+          </Link>
+        </button>
       </div>
     );
 }

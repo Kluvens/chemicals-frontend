@@ -121,7 +121,7 @@ const Cart = () => {
   }
 
   return (
-    <div>
+    <div className='cart-main'>
       <h1>Welcome to my cart</h1>
       {cartItems.length > 0 ? (
         <>
