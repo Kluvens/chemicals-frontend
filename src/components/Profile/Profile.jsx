@@ -1,5 +1,6 @@
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import Nav from '../Nav/Nav';
 import './Profile.css'
 
 const Profile = () => {
@@ -36,15 +37,17 @@ const Profile = () => {
   }
 
   return (
-    <div className='profile-main'>
-      <div className="user-profile">
-        <h1>Welcom, {userData.name}</h1>
-        <p>My Email address is: {userData.email}</p>
-        <button onClick={handleViewCart}><p>View Cart</p></button>
-        <button onClick={handleLogOut}><p>Logout</p></button>
+    <div>
+      <Nav />
+      <div className='profile-main'>
+        <div className="user-profile">
+          <h1>Welcom, {userData.name}</h1>
+          <p>My Email address is: {userData.email}</p>
+          <button onClick={handleViewCart}><p>View Cart</p></button>
+          <button onClick={handleLogOut}><p>Logout</p></button>
+        </div>
       </div>
     </div>
-    
   );
 };
 

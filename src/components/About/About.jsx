@@ -1,9 +1,12 @@
 import { useState } from "react";
+import Nav from "../Nav/Nav";
 import './About.css'
 
 function About() {
   return (
-    <div className="wrap">
+    <div>
+      <Nav />
+      <div className="wrap">
 
       <div className="intro">
         <div className="intro-title-wrapper">
@@ -72,11 +75,8 @@ function About() {
             <p>Thanks to the open source community, Odoo is actively maintained by a large base of developers to meet evolving customer needs and provide new, innovative applications.</p>
           </div>
         </div>
-
-        
-
-
       </div>
+    </div>
     </div>
   )
 }

@@ -1,11 +1,14 @@
 import './ProductDetail.css'
 import { useLocation } from 'react-router-dom';
+import Nav from '../Nav/Nav';
 
 function ProductDetail() {
     const location = useLocation();
     const { id, description } = location.state;
     return (
-      <div className="all">
+      <div>
+        <Nav />
+        <div className="all">
 
         <div className='main-content'>
             <div className="product-display">
@@ -48,6 +51,7 @@ function ProductDetail() {
             </div>
         </div>
           
+      </div>
       </div>
     )
 }

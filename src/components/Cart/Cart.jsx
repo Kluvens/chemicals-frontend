@@ -1,5 +1,6 @@
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import Nav from '../Nav/Nav';
 import './Cart.css'
 
 const Cart = () => {
@@ -27,7 +28,6 @@ const Cart = () => {
   const handleIncrement = async (item) => {
     const token = localStorage.getItem('token');
     const userId = localStorage.getItem('userId');
-
     try {
       const response = await fetch("http://localhost:8082/api/users/addToCart", {
         method: "POST",
@@ -126,7 +126,10 @@ const Cart = () => {
   }
 
   return (
-    <div className='cart-main'>
+    <div>
+      <Nav />
+      <div className='cart-main'>
+      
       {cartItems.length > 0 ? (
         <div className='cart-body'>
           <div className='cart-header'>
@@ -163,6 +166,7 @@ const Cart = () => {
         </div>
       )}
       {/* </div> */}
+    </div>
     </div>
   );
 }
