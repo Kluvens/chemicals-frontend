@@ -14,7 +14,7 @@ function Product(props) {
       const { id, name, category, price, description } = props.product;
 
       try {
-        const response = await fetch("http://localhost:8082/api/users/addToCart", {
+        const response = await fetch("https://chemicals-shopping-backend.onrender.com/api/users/addToCart", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

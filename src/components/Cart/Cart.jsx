@@ -13,7 +13,7 @@ const Cart = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await fetch(`http://localhost:8082/api/users/cart/${id}`);
+        const response = await fetch(`https://chemicals-shopping-backend.onrender.com/api/users/cart/${id}`);
         const data = await response.json();
         setCartItems(data.items);
         setTotal(data.total);
@@ -29,7 +29,7 @@ const Cart = () => {
     const token = localStorage.getItem('token');
     const userId = localStorage.getItem('userId');
     try {
-      const response = await fetch("http://localhost:8082/api/users/addToCart", {
+      const response = await fetch("https://chemicals-shopping-backend.onrender.com/api/users/addToCart", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -67,7 +67,7 @@ const Cart = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:8082/api/users/removeFromCart", {
+      const response = await fetch("https://chemicals-shopping-backend.onrender.com/api/users/removeFromCart", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -98,7 +98,7 @@ const Cart = () => {
 
   const handleDelete = async (item) => {
     try {
-      const response = await fetch("http://localhost:8082/api/users/deleteFromCart", {
+      const response = await fetch("https://chemicals-shopping-backend.onrender.com/api/users/deleteFromCart", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json"

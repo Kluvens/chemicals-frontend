@@ -33,7 +33,7 @@ const Register = () => {
         event.preventDefault();
 
         if (password === confirmPassword) {
-          const response = await fetch("http://localhost:8082/api/users/register", {
+          const response = await fetch("https://chemicals-shopping-backend.onrender.com/api/users/register", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

@@ -11,7 +11,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await fetch(`http://localhost:8082/api/users/profile/${id}`);
+        const response = await fetch(`https://chemicals-shopping-backend.onrender.com/api/users/profile/${id}`);
         const data = await response.json();
         setUserData(data);
       } catch (error) {
