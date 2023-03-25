@@ -1,5 +1,6 @@
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import './Profile.css'
 
 const Profile = () => {
   const { id } = useParams();
@@ -30,25 +31,20 @@ const Profile = () => {
     navigate('/');
   }
 
+  const handleViewCart = () => {
+    navigate(`/cart/${id}`);
+  }
+
   return (
-    // <div className="user-profile">
-    //   <Link to='/'>
-    //     <button>Home</button>
-    //   </Link>
-    //   <h1>{userData.name}</h1>
-    //   <p>{userData.email}</p>
-    //   <button onClick={handleLogOut}>Logout</button>
-    // </div>
-    <div class="user-profile">
-      <h1>{userData.name}</h1>
-      <p class="title">CEO & Founder, Example</p>
-      <p>{userData.email}</p>
-      <a href="#"><i class="fa fa-dribbble"></i></a>
-      <a href="#"><i class="fa fa-twitter"></i></a>
-      <a href="#"><i class="fa fa-linkedin"></i></a>
-      <a href="#"><i class="fa fa-facebook"></i></a>
-      <p><button onClick={handleLogOut}>Logout</button></p>
-  </div>
+    <div className='profile-main'>
+      <div className="user-profile">
+        <h1>Welcom, {userData.name}</h1>
+        <p>My Email address is: {userData.email}</p>
+        <button onClick={handleViewCart}><p>View Cart</p></button>
+        <button onClick={handleLogOut}><p>Logout</p></button>
+      </div>
+    </div>
+    
   );
 };
 

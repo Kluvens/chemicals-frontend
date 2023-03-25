@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: aliceblue;
+  background: linear-gradient(to bottom right, #E3F0FF, #FAFCFF);
 }
 
 .intro {

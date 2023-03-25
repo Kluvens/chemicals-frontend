@@ -1,5 +1,6 @@
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import './Cart.css'
 
 const Cart = () => {
   const { id } = useParams();
@@ -120,31 +121,48 @@ const Cart = () => {
     }
   }
 
+  const handleEmptyCart = () => {
+    navigate('/');
+  }
+
   return (
     <div className='cart-main'>
-      <h1>Welcome to my cart</h1>
       {cartItems.length > 0 ? (
-        <>
+        <div className='cart-body'>
+          <div className='cart-header'>
+            <h3 className='cart-heading'>Welcome to my shopping cart!</h3>
+          </div>
           {cartItems.map((item) => (
-            <div key={item.name}>
-              <div>{item.name}</div>
-              <div>{item.description}</div>
-              <div>{item.price}</div>
-              <div>Quantity: {item.quantity}</div>
-              <button onClick={() => handleIncrement(item)}>+</button>
-              <button onClick={() => handleDecrement(item)}>-</button>
-              <button onClick={() => handleDelete(item)}>Delete</button>
+            <div className='cart-item' key={item.name}>
+              <img className='cart-item-img' src="https://www.lookchem.cn/ProImage/2010/0626/79-14-1.jpg" alt="cart-product" />
+              <div className='cart-item-middle'>
+                <div className='cart-item-name'>{item.name}</div>
+                {/* <div className='cart-item-des'>{item.description}</div> */}
+                <div className='cart-quan'>
+                  <button className='cart-item-quan-button' onClick={() => handleIncrement(item)}>+</button>
+                  <div className='cart-item-quantity'>{item.quantity}</div>
+                  <button className='cart-item-quan-button' onClick={() => handleDecrement(item)}>-</button>
+                </div>
+                
+              </div>
+              <div className='cart-item-right'>
+                <div className='cart-item-price'><span className='cart-rmb'>¥</span><span>{item.price}</span></div>
+                <button className='cart-item-delete' onClick={() => handleDelete(item)}>Delete</button>
+              </div>
             </div>
           ))}
-          <div>
-            Total price: {total}
+          <div className='cart-total'>
+            Total price: {Math.round(total * 100) / 100}
+            <button className='cart-check-out'>Check Out</button>
           </div>
-        </>
+          
+        </div>
       ) : (
-        <div>
-          <p>Your cart is empty. Start shopping!</p>
+        <div className='cart-empty'>
+          <p>Your cart is empty. <span className='empty-cart' onClick={handleEmptyCart}>Start shopping!</span></p>
         </div>
       )}
+      {/* </div> */}
     </div>
   );
 }

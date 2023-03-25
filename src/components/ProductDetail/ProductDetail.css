@@ -4,7 +4,7 @@
 }
 
 .main-content {
-  background-color: antiquewhite;
+  background: linear-gradient(to bottom right, #E3F0FF, #FAFCFF);
   width: 100%;
   height: calc(100vh - 80px);
   display: flex; /* add display and flex properties */

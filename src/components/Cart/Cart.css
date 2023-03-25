@@ -1,3 +1,137 @@
 .cart-main {
-    min-height: calc(100ch - 140px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #E3F0FF, #FAFCFF);
+}
+
+.cart-body {
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border-radius: 20px;
+  margin: 30px 0;
+}
+
+.cart-header {
+  margin-bottom: 20px;
+}
+
+.cart-heading {
+  font-size: 2em;
+}
+
+.cart-item {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.cart-item-img {
+  width: auto;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.cart-item-middle {
+  margin-right: 20px;
+  width: 250px;
+}
+
+.cart-quan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+}
+
+.cart-item-name {
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.cart-item-quantity {
+  width: 30px;
+  margin: 0;
+}
+
+.cart-item-quan-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-family: ‘Open Sans’;
+  font-weight: 900;
+  color: #202020;
+  cursor: pointer;
+}
+
+.cart-item-quan-button:hover {
+  background-color: #aaa9a9;
+}
+
+.cart-rmb {
+  font-size: 35px;
+}
+
+.cart-item-price {
+  font-size: 25px;
+}
+
+.cart-item-delete {
+  background-color: white;
+  color: red;
+  font-size: 20px;
+}
+
+.cart-item-right {
+  width: 200px;
+  display: block;
+  padding-top: 10px;
+}
+
+.cart-total {
+  margin-top: 20px;
+  font-size: 1.8em;
+  font-weight: bold;
+  text-align: right;
+  border-top: 3px solid rgb(187, 186, 186);
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-check-out {
+  border: 1px solid rgb(0, 173, 177);
+  color: rgb(0, 173, 177);
+  background-color: white;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.cart-check-out:hover {
+  color: white;
+  background-color: rgb(0, 173, 177);
+}
+
+.cart-empty {
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-cart {
+  color: rgb(0, 173, 177);
+  cursor: pointer;
 }
