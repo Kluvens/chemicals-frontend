@@ -148,6 +148,11 @@ function App() {
                 <li><a onClick={() => filterProducts('聚合物', '')}>聚合物</a></li>
                 <li><a onClick={() => filterProducts('食品和饲料添加剂', '')}>食品和饲料添加剂</a></li>
                 <li><a onClick={() => filterProducts('信息化学品', '')}>信息化学品</a></li>
+                <li><a onClick={() => filterProducts('化学矿', '')}>化学矿</a></li>
+                <li><a onClick={() => filterProducts('石油化工', '')}>石油化工</a></li>
+                <li><a onClick={() => filterProducts('香精与香料', '')}>香精与香料</a></li>
+                <li><a onClick={() => filterProducts('无机化工', '')}>无机化工</a></li>
+                <li><a onClick={() => filterProducts('农用化学品', '')}>农用化学品</a></li>
             </ul>
           </div>
           </div>

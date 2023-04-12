@@ -155,7 +155,7 @@ const Cart = () => {
             </div>
           ))}
           <div className='cart-total'>
-            总价: {Math.round(total * 100) / 100}
+            总价: ¥{Math.round(total * 100) / 100}
             <button className='cart-check-out'>开始结算</button>
           </div>
           

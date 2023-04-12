@@ -52,6 +52,7 @@ function Product(props) {
 
         <h3 className="label">{name}</h3>
         <p className="label">分类: {category}</p>
+        <p className="label">价格: {price}</p>
         <button className="inquriy" onClick={addToCart}>
           <Link>
             <FaCartPlus/> <span>加入购物车</span> 
