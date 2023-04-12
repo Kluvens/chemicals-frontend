@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Nav from '../Nav/Nav';
 import './Register.css'
 
 const Register = () => {
@@ -33,7 +34,7 @@ const Register = () => {
         event.preventDefault();
 
         if (password === confirmPassword) {
-          const response = await fetch("https://chemicals-shopping-backend.onrender.com/api/users/register", {
+          const response = await fetch("https://aipurui-backend.onrender.com/api/users/register", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -59,33 +60,38 @@ const Register = () => {
     }
 
     return (
-      <div className='main'>
-        <div className='register-session'>
-          <div className='register-left'>
+      <div>
+        <Nav />
+
+        <div className='main'>
+          <div className='register-session'>
+            <div className='register-left'>
+            </div>
+            <form className='form' onSubmit={handleSubmit}>
+              <h2>注册我的爱普瑞</h2>
+              <div>
+                <label>姓名:</label>
+                <input className='register-input' type="text" value={name} onChange={handleNameChange} />
+              </div>
+              <div>
+                <label>邮箱:</label>
+                <input className='register-input' type="email" value={email} onChange={handleEmailChange} />
+              </div>
+              <div>
+                <label>密码:</label>
+                <input className='register-input' type="password" value={password} onChange={handlePasswordChange} />
+              </div>
+              <div>
+                <label>确认密码:</label>
+                <input className='register-input' type="password" value={confirmPassword} onChange={handleConfirmPasswordChange} style={{ borderColor: showRed ? 'red' : 'initial' }} />
+                {showRed ? <p style={{ color: 'red' }}>密码不匹配</p> : null}
+              </div>
+              <button className='register-button' type="submit">立即注册</button>
+            </form>
           </div>
-          <form className='form' onSubmit={handleSubmit}>
-            <h2>Register</h2>
-            <div>
-              <label>Name:</label>
-              <input className='register-input' type="text" value={name} onChange={handleNameChange} />
-            </div>
-            <div>
-              <label>Email:</label>
-              <input className='register-input' type="email" value={email} onChange={handleEmailChange} />
-            </div>
-            <div>
-              <label>Password:</label>
-              <input className='register-input' type="password" value={password} onChange={handlePasswordChange} />
-            </div>
-            <div>
-              <label>Confirm Password:</label>
-              <input className='register-input' type="password" value={confirmPassword} onChange={handleConfirmPasswordChange} style={{ borderColor: showRed ? 'red' : 'initial' }} />
-              {showRed ? <p style={{ color: 'red' }}>Passwords do not match</p> : null}
-            </div>
-            <button className='register-button' type="submit">Register</button>
-          </form>
         </div>
       </div>
+      
       
     );
     

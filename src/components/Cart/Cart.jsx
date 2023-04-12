@@ -13,7 +13,7 @@ const Cart = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await fetch(`https://chemicals-shopping-backend.onrender.com/api/users/cart/${id}`);
+        const response = await fetch(`https://aipurui-backend.onrender.com/api/users/cart/${id}`);
         const data = await response.json();
         setCartItems(data.items);
         setTotal(data.total);
@@ -29,7 +29,7 @@ const Cart = () => {
     const token = localStorage.getItem('token');
     const userId = localStorage.getItem('userId');
     try {
-      const response = await fetch("https://chemicals-shopping-backend.onrender.com/api/users/addToCart", {
+      const response = await fetch("https://aipurui-backend.onrender.com/api/users/addToCart", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -67,7 +67,7 @@ const Cart = () => {
     }
 
     try {
-      const response = await fetch("https://chemicals-shopping-backend.onrender.com/api/users/removeFromCart", {
+      const response = await fetch("https://aipurui-backend.onrender.com/api/users/removeFromCart", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -98,7 +98,7 @@ const Cart = () => {
 
   const handleDelete = async (item) => {
     try {
-      const response = await fetch("https://chemicals-shopping-backend.onrender.com/api/users/deleteFromCart", {
+      const response = await fetch("https://aipurui-backend.onrender.com/api/users/deleteFromCart", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json"
@@ -133,11 +133,11 @@ const Cart = () => {
       {cartItems.length > 0 ? (
         <div className='cart-body'>
           <div className='cart-header'>
-            <h3 className='cart-heading'>Welcome to my shopping cart!</h3>
+            <h3 className='cart-heading'>我的购物车</h3>
           </div>
           {cartItems.map((item) => (
             <div className='cart-item' key={item.name}>
-              <img className='cart-item-img' src="https://www.lookchem.cn/ProImage/2010/0626/79-14-1.jpg" alt="cart-product" />
+              <img className='cart-item-img' src={require(`../../assets/${item.product_id}.webp`)} alt="cart-product" />
               <div className='cart-item-middle'>
                 <div className='cart-item-name'>{item.name}</div>
                 {/* <div className='cart-item-des'>{item.description}</div> */}
@@ -150,19 +150,19 @@ const Cart = () => {
               </div>
               <div className='cart-item-right'>
                 <div className='cart-item-price'><span className='cart-rmb'>¥</span><span>{item.price}</span></div>
-                <button className='cart-item-delete' onClick={() => handleDelete(item)}>Delete</button>
+                <button className='cart-item-delete' onClick={() => handleDelete(item)}>删除</button>
               </div>
             </div>
           ))}
           <div className='cart-total'>
-            Total price: {Math.round(total * 100) / 100}
-            <button className='cart-check-out'>Check Out</button>
+            总价: {Math.round(total * 100) / 100}
+            <button className='cart-check-out'>开始结算</button>
           </div>
           
         </div>
       ) : (
         <div className='cart-empty'>
-          <p>Your cart is empty. <span className='empty-cart' onClick={handleEmptyCart}>Start shopping!</span></p>
+          <p>购物车竟然是空的 <span className='empty-cart' onClick={handleEmptyCart}>现在就逛！嗷嗷嗷~</span></p>
         </div>
       )}
       {/* </div> */}

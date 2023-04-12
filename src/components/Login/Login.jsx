@@ -24,7 +24,7 @@ const Login = () => {
     event.preventDefault();
   
     try {
-      const response = await fetch("https://chemicals-shopping-backend.onrender.com/api/users/login", {
+      const response = await fetch("https://aipurui-backend.onrender.com/api/users/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -52,19 +52,19 @@ const Login = () => {
         <div className='login-left'>
         </div>
         <form onSubmit={handleSubmit} className='form'>
-        <h2>We are here for you</h2>
-        <p>Welcome back! Log in to your account to view today's clients:</p>
+        <h2>爱普瑞， 让化学融入生活！</h2>
+        <p>欢迎回来! 立即登录去看看产品~:</p>
         <div className='login-box'>
           <HiOutlineMail />
-          <input className='login-input' type="email" value={email} onChange={handleEmailChange} placeholder='Email' />
+          <input className='login-input' type="email" value={email} onChange={handleEmailChange} placeholder='邮箱' />
         </div>
         <div className='login-box'>
           <RiLockPasswordLine />
-            <input className='login-input' type="password" value={password} onChange={handlePasswordChange} placeholder='Password' />
+            <input className='login-input' type="password" value={password} onChange={handlePasswordChange} placeholder='密码' />
         </div>
           {error && <div style={{ color: 'red' }}>{error}</div>} {/* display error message in red */}
-          <button className='login-button' type="submit">Login</button>
-          <h4>Don't have an account?   <span login-to-register><Link to="/register">Register</Link></span></h4>
+          <button className='login-button' type="submit">登录</button>
+          <h4>还没有账户?   <span login-to-register><Link to="/register">立即注册</Link></span></h4>
         </form>
       </div>
 

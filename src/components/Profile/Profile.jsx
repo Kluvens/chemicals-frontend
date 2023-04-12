@@ -11,7 +11,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await fetch(`https://chemicals-shopping-backend.onrender.com/api/users/profile/${id}`);
+        const response = await fetch(`https://aipurui-backend.onrender.com/api/users/profile/${id}`);
         const data = await response.json();
         setUserData(data);
       } catch (error) {
@@ -23,7 +23,7 @@ const Profile = () => {
   }, [id, navigate]);
 
   if (!userData) {
-    return <div>Loading user data...</div>;
+    return <div>正在加载中...</div>;
   }
 
   const handleLogOut = () => {
@@ -41,10 +41,10 @@ const Profile = () => {
       <Nav />
       <div className='profile-main'>
         <div className="user-profile">
-          <h1>Welcom, {userData.name}</h1>
-          <p>My Email address is: {userData.email}</p>
-          <button onClick={handleViewCart}><p>View Cart</p></button>
-          <button onClick={handleLogOut}><p>Logout</p></button>
+          <h1>欢迎, {userData.name}</h1>
+          <p>我的邮箱地址是: {userData.email}</p>
+          <button onClick={handleViewCart}><p>看看购物车</p></button>
+          <button onClick={handleLogOut}><p>退出登录</p></button>
         </div>
       </div>
     </div>

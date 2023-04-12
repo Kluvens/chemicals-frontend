@@ -75,19 +75,19 @@ function Nav() {
       <div className='shopnavbg1'>
         <div className='navbox'>
           <button onClick={handleHomeClick} className='navbutton'>
-              <a><FaHome /> Home</a>
+              <a><FaHome /> 首页</a>
           </button>
           <button onClick={handleHomeClick} className='navbutton'>
-              <a><FaProductHunt /> Products</a>
+              <a><FaProductHunt /> 产品</a>
           </button>
           <button onClick={handleAboutClick} className='navbutton'>
-              <a><FaInfoCircle /> About Us</a>
+              <a><FaInfoCircle /> 关于我们</a>
           </button>
           <button onClick={handleProfileClick} className='navbutton'>
-              <a><FaUser /> Profile</a>
+              <a><FaUser /> 个人中心</a>
           </button>
           <button onClick={handleCartOnclick} className='navbutton'>
-              <a><FaShoppingCart /> Cart</a>
+              <a><FaShoppingCart /> 购物车</a>
           </button>
           
         </div>

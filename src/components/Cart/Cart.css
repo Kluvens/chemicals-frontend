@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(to bottom right, #E3F0FF, #FAFCFF);
 }
 
@@ -31,9 +31,9 @@
 }
 
 .cart-item-img {
-  width: auto;
+  width: 250px;
   height: 100px;
-  object-fit: cover;
+  object-fit: contain;
   margin-right: 20px;
 }
 

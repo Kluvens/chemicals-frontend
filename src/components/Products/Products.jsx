@@ -1,45 +1,115 @@
 const Items = [
-  {
-    id: 1,
-    name: 'Product 1',
-    category: 'Category 1',
-    price: 10.99,
-    description: 'This is the description for Product 1'
+  { 
+    product_id: 0,
+    name: '双-五聚乙二醇-琥珀酰亚胺酯', 
+    category: '胶粘剂', 
+    price: 3949.20, 
+    description: '与包含不同 PEG 链长的非均匀混合物的典型 PEG 试剂相比，该 PEG 试剂是具有确定的分子量和间隔臂长的均质化合物，在优化和表征交联应用方面提供了更高的精度。 含有 N-羟基琥珀酰亚胺（NHS） 酯的同型双功能交联剂通常用于蛋白质结构的低分辨率 3-D 研究和蛋白质相互作用分析。' 
+  },
+  { 
+    product_id: 1,
+    name: '壳聚糖', 
+    category: '催化剂及助剂', 
+    price: 944.45, 
+    description: '与多价阴离子形成凝胶。 产生透明溶液，干燥后形成坚固、透明的薄膜。壳聚糖可用于蛋白质沉淀中的凝聚剂、包封剂和水性增稠剂。生物相容、抗菌和环保的聚电解质，其具有多种应用，包括水处理、色谱法、化妆品添加剂、抗微生物活性的纺织品处理、纺织品的新型纤维、照相纸、可生物降解的薄膜、生物医学装置、以及用于药物递送中控制释放的微胶囊植入物。' 
+  },
+  { 
+    product_id: 2,
+    name: '1-羟基苯并三唑 水合物', 
+    category: '医药与生物化工', 
+    price: 287.74, 
+    description: '1-羟基苯并三唑是一种偶联剂，用于活化酯/酸与保护氨基酸氨基之间发生缩合反应时合成酰胺。[1]此外，还用作肽合成过程中的外消旋作用抑制剂。1-羟基苯并三唑水合物可用作缩合剂以：通过γ-谷氨基酸二聚体制备聚-γ-谷氨酸甲酯。通过氨肟与三氟乙酸酐或苯甲酸衍生物的成环缩合反应制备恶二唑。'
+  },
+  { 
+    product_id: 3,
+    name: '异佛尔酮二异氰酸酯', 
+    category: '催化剂及助剂', 
+    price: 337.53, 
+    description: '异佛尔酮二异氰酸酯（IPDI）是脂肪族二异氰酸酯，主要通过形成 −NCO连接用作固化剂。 主要用于制备聚氨酯基薄膜和泡沫，应用于各种高性能涂层。由于存在脂族环，可制成抗紫外线膜' 
+  }, 
+  { 
+    product_id: 4,
+    name: '奎诺二甲基丙烯酸酯', 
+    category: '化学试剂', 
+    price: 928.26, 
+    description: '(±)-6-羟基-2,5,7,8-四甲基色满-2-羧酸（Trolox）展现出了自由基清除和抗氧化活性。(±)-6-羟基-2,5,7,8-四甲基色满-2-羧酸（Trolox）已用于6-羟基-2,5,7,8-四甲基色满-2-羧酸等效抗氧化检测（TEAC）以确定不同水果物种的总抗氧化能力' 
+  },
+  { 
+    product_id: 5,
+    name: '奎诺二甲基丙烯酸酯', 
+    category: '化学试剂', 
+    price: 1037.66, 
+    description: '1,5,7-三氮杂双环[4.4.0]癸-5-烯，一种双环胍碱，已被发现是迈克尔和迈克尔型反应的优良催化剂。[1]它可与拉沙里菌素酸形成1：1复合物，并且其晶体结构已通过X射线衍射、FT-IR光谱和 1H NMR进行研究。1,5,7-三氮杂双环[4.4.0]癸-5-烯可用作酯氨解过程的有机催化剂。它可以用作催化剂，用于在各种活化的烯烃中直接加入P（O）-H键（二烷基亚磷酸酯和二苯基亚膦酸酯）。聚合物负载的1,5,7-三氮杂双环[4.4.0]癸-5-烯（PTBD）可用作碱和试剂清除剂，以用于由酚和烷基或芳基卤化物合成芳基醚。' 
+  },
+  { 
+    product_id: 6,
+    name: '十二烷基苯磺酸钠', 
+    category: '医药与生物化工', 
+    price: 361.63, 
+    description: '十二烷基苯磺酸钠(SDBS)作为表面活性剂参与环phane BIMCP-1的离子自组装反应，是一种离子表面活性剂。以十二烷基苯磺酸钠为原料，制备了葡萄糖安培生物传感器。十二烷基苯磺酸钠用于稳定石墨烯纳米薄片在液相制备过程中的分散相。它还可在水介质中悬浮单壁碳纳米管，并具有良好的分辨光谱特性。' 
+  },
+  { 
+    product_id: 7,
+    name: '2-氰乙基 N,N,N′,N′-四异丙基亚磷酰二胺', 
+    category: '化学试剂', 
+    price: 852.15, 
+    description: '2-氰基乙基N,N,N′,N′-四异丙基亚磷酰二胺被用于：制备合成12-聚体寡脱氧核苷酸所需的亚磷酰胺试剂，作为合成1,2-二酰基-sn-甘油磷脂酰丝氨酸的磷酸化试剂，用于脱氧核糖核苷亚磷酰胺的原位制备' 
+  },
+  { 
+    product_id: 8,
+    name: '多库酯 钠盐', 
+    category: '中间体', 
+    price: 250.41, 
+    description: '琥珀辛酯磺酸钠盐(DOSS)可用作阴离子表面活化剂：以3-(环己胺)-2-羟基-1-丙磺酸(CAPSO)为原料制备微乳液。形成反胶束。提高聚己内酯富马酸聚吡咯(PCLF-PPy)复合材料的电导率和细胞附着性能。' 
+  },
+  { 
+    product_id: 9,
+    name: 'UNC0638 水合物', 
+    category: '医药与生物化工', 
+    price: 1427.00, 
+    description: 'UNC0638已被用来阻断C2C12细胞中的G9a（赖氨酸甲基转移酶）功能。据报道，UNC0638可以降低H3K9的二甲基化（H3K9me2）水平并抑制毛细胞的细胞死亡。UNC0638水合物已被用于：分离和提取人血细胞和细胞核，分析潜在感染细胞系中人类免疫缺陷病毒（HIV）的活化，确定G9a的作用及其酶活性对顺铂耐药性的影响。' 
+  },
+  { 
+    product_id: 10,
+    name: '聚乙二醇甲醚甲基丙烯酸酯', 
+    category: '聚合物', 
+    price: 695.22, 
+    description: '聚（乙二醇）甲基醚甲基丙烯酸酯（PEGMA）是聚乙二醇（PEG）的非线性类似物。具有刷型结构的生物相容性均聚物，用于提供PEG的改性表面。PEGMA可用于基于聚醚砜超滤（UF）膜的表面改性，进而用作抗污材料。' 
   },
   {
-    id: 2,
-    name: 'Product 2',
-    category: 'Category 1',
-    price: 15.99,
-    description: 'This is the description for Product 2'
+    product_id: 11,
+    name: 'O,O′-二(2-氨基丙基)聚丙二醇-嵌段-聚乙二醇-嵌段-聚丙二醇', 
+    category: '聚合物', 
+    price: 2271.89, 
+    description: '修饰聚酰胺以增强亲水性。制备生物相容性制品和包被层。与异氰酸酯一起用于制备水凝胶。' 
   },
   {
-    id: 3,
-    name: 'Product 3',
-    category: 'Category 2',
-    price: 12.99,
-    description: 'This is the description for Product 3'
+    product_id: 12,
+    name: '绿色荧光PLGA纳米颗粒', 
+    category: '信息化学品', 
+    price: 5229.71, 
+    description: 'Degradex®采用聚（D,L-丙交酯-共-乙交酯）制成，L/G比为50/50，分子量为30,000。涡旋并超声处理5分钟，以确保微球充分混悬。药物研发中用于成像和细胞追踪的荧光PLGA颗粒。该颗粒可用于荧光测定和药物递送。' 
   },
   {
-    id: 4,
-    name: 'Product 4',
-    category: 'Category 3',
-    price: 8.99,
-    description: 'This is the description for Product 4'
+    product_id: 13,
+    name: 'Parteck® SI 400 LEX(山梨糖醇)', 
+    category: '食品和饲料添加剂', 
+    price: 528.1, 
+    description: '在制剂中，作为Emprove® 计划的一部分，我们的原料随附完备文件，以便助力您制药和生物制药产品合规性、完整供应链透明度以及风险规避。我们的SAFC®产品线经受严格的质控程序检验并遵照适用的cGMP指南生产，提供用于生物药物和药物制剂和生产的优质产品。' 
   },
   {
-    id: 5,
-    name: 'Product 5',
-    category: 'Category 3',
-    price: 20.99,
-    description: 'This is the description for Product 5'
+    product_id: 14,
+    name: '盐酸舍曲林 盐酸盐', 
+    category: '医药与生物化工', 
+    price: 2018.62, 
+    description: '舍曲林抑制血小板功能，显示抗血小板和内皮保护功能。缓解抑郁症，提高心血管疾病患者的生活质量。 也可开处方治疗帕金森病的抑郁症状。选择性 5-羟色胺再摄取抑制剂，抗抑郁药。' 
   },
   {
-    id: 6,
-    name: 'Product 6',
-    category: 'Category 3',
-    price: 18.99,
-    description: 'This is the description for Product 6'
+    product_id: 15,
+    name: 'β-烟酰胺腺嘌呤二核苷酸 水合物', 
+    category: '医药与生物化工', 
+    price: 245.8, 
+    description: 'β-烟酰胺腺嘌呤二核苷酸(β-NAD)是乙醇脱氢酶的辅因子，在内脏平滑肌中起到抑制性神经递质的作用。NAD/NADH比值对细胞内氧还电势具有调节作用，进而影响体内的代谢反应。' 
   },
 ];
 

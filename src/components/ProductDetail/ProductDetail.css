@@ -52,14 +52,15 @@
   background-color: white;
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
+  padding-right: 10px;
 }
 
 .title {
-  font-size: 30px;
+  font-size: 23px;
   padding-left: 20px;
   padding-top: 10px;
   border-bottom: 1px solid #eee;
-  height: 80px;
+  height: 175px;
   justify-content: left;
   align-items: center;
   display: flex;
@@ -73,7 +74,7 @@
 }
 
 .first {
-  width: 150px;
+  width: 120px;
   color: gray;
   display: inline-block;
 }

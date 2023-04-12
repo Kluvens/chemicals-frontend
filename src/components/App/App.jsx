@@ -103,19 +103,19 @@ function App() {
       <div className='shopnavbg1'>
         <div className='navbox'>
           <button onClick={handleHomeClick} className='navbutton'>
-              <a><FaHome /> Home</a>
+              <a><FaHome /> 主页</a>
           </button>
           <button onClick={handleHomeClick} className='navbutton'>
-              <a><FaProductHunt /> Products</a>
+              <a><FaProductHunt /> 产品</a>
           </button>
           <button onClick={handleAboutClick} className='navbutton'>
-              <a><FaInfoCircle /> About Us</a>
+              <a><FaInfoCircle /> 关于我们</a>
           </button>
           <button onClick={handleProfileClick} className='navbutton'>
-              <a><FaUser /> Profile</a>
+              <a><FaUser /> 个人中心</a>
           </button>
           <button onClick={handleCartOnclick} className='navbutton'>
-              <a><FaShoppingCart /> Cart</a>
+              <a><FaShoppingCart /> 购物车</a>
           </button>
           
         </div>
@@ -140,21 +140,14 @@ function App() {
           <div className="shop-w">
             <ul className="catelist">
                 <li><a onClick={() => filterProducts('All', '')}>全部</a></li>
-                <li><a onClick={() => filterProducts('Category 1', '')}>石油化工</a></li>
-                <li><a onClick={() => filterProducts('Category 3', '')}>胶粘剂</a></li>
-                <li><a onClick={() => filterProducts('Category 1', '')}>中间体</a></li>
-                <li><a onClick={() => filterProducts('Category 2', '')}>化学矿</a></li>
-                <li><a onClick={() => filterProducts('Category 2', '')}>食品和饲料添加剂</a></li>
-                <li><a onClick={() => filterProducts('Category 1', '')}>农用化学品</a></li>
-                <li><a onClick={() => filterProducts('Category 2', '')}>医药与生物化工</a></li>
-                <li><a onClick={() => filterProducts('Category 1', '')}>其他</a></li>
-                <li><a onClick={() => filterProducts('Category 2', '')}>聚合物</a></li>
-                <li><a onClick={() => filterProducts('Category 1', '')}>信息化学品</a></li>
-                <li><a onClick={() => filterProducts('Category 1', '')}>香精与香料</a></li>
-                <li><a onClick={() => filterProducts('Category 2', '')}>染料与颜料</a></li>
-                <li><a onClick={() => filterProducts('Category 2', '')}>无机化工</a></li>
-                <li><a onClick={() => filterProducts('Category 1', '')}>催化剂及助剂</a></li>
-                <li><a onClick={() => filterProducts('Category 2', '')}>化学试剂</a></li>
+                <li><a onClick={() => filterProducts('胶粘剂', '')}>胶粘剂</a></li>
+                <li><a onClick={() => filterProducts('催化剂及助剂', '')}>催化剂及助剂</a></li>
+                <li><a onClick={() => filterProducts('医药与生物化工', '')}>医药与生物化工</a></li>
+                <li><a onClick={() => filterProducts('化学试剂', '')}>化学试剂</a></li>
+                <li><a onClick={() => filterProducts('中间体', '')}>中间体</a></li>
+                <li><a onClick={() => filterProducts('聚合物', '')}>聚合物</a></li>
+                <li><a onClick={() => filterProducts('食品和饲料添加剂', '')}>食品和饲料添加剂</a></li>
+                <li><a onClick={() => filterProducts('信息化学品', '')}>信息化学品</a></li>
             </ul>
           </div>
           </div>

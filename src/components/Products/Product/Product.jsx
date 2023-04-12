@@ -4,17 +4,16 @@ import { useState } from "react";
 import {FaCartPlus} from 'react-icons/fa';
 
 function Product(props) {
-    const { id, name, category, price, description } = props.product;
+    const { product_id, name, category, price, description } = props.product;
   
     const [error, setError] = useState('');
     
     const addToCart = async () => {
       const token = localStorage.getItem('token');
       const userId = localStorage.getItem('userId');
-      const { id, name, category, price, description } = props.product;
 
       try {
-        const response = await fetch("https://chemicals-shopping-backend.onrender.com/api/users/addToCart", {
+        const response = await fetch("https://aipurui-backend.onrender.com/api/users/addToCart", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -23,6 +22,7 @@ function Product(props) {
           body: JSON.stringify({ 
             userId: userId,
             itemName: name,
+            itemId: product_id,
             itemDescription: description,
             itemPrice: price
           }),
@@ -44,17 +44,17 @@ function Product(props) {
     return (
       <div className='product'>
         
-          <Link to="/product" state={{ id: id,  description: description}}>
+          <Link to="/product" state={{ product_id: product_id, name: name, category: category, price: price,  description: description}}>
             <div className="p-img">
-              <img src="https://www.lookchem.cn/ProImage/2010/0626/79-14-1.jpg"/>
+            <img src={require(`../../../assets/${product_id}.webp`)} />
             </div>
           </Link>
 
         <h3 className="label">{name}</h3>
-        <p className="label">Category: {category}</p>
+        <p className="label">分类: {category}</p>
         <button className="inquriy" onClick={addToCart}>
           <Link>
-            <FaCartPlus/> <span>Add to Cart</span> 
+            <FaCartPlus/> <span>加入购物车</span> 
           </Link>
         </button>
       </div>
